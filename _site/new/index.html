@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Deep learning app</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<!-- MATERIAL DESIGN -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<!--<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-deep_purple.min.css" />-->
+		<!-- <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> ESTA ABAJO -->
+	</head>
+	<body>
+
+		<!-- Simple header with fixed tabs. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+		            mdl-layout--fixed-tabs">
+		  <header class="mdl-layout__header">
+		    <div class="mdl-layout__header-row">
+		      <!-- Title -->
+		      <span class="mdl-layout-title">Deep learning</span>
+		    </div>
+		    <!-- Tabs -->
+		    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+		      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Datos</a>
+		      <a href="#fixed-tab-2" class="mdl-layout__tab">Red neuronal</a>
+		      <a href="#fixed-tab-3" class="mdl-layout__tab">Entrenar</a>
+		    </div>
+		  </header>
+
+
+
+		  <main class="mdl-layout__content">
+
+		  	<!--======================================= PESTAÑA DATOS ====================================-->
+
+		    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+		      <div class="page-content">
+
+		      	<div class="container">
+					<div id="layers" class="layer-container stacked-top">
+						<div class="layer bottom-layer dark-blue-layer"></div>
+						<div class="layer mid-layer light-blue-layer"></div>
+						<!--<div class="layer top-layer white-layer"></div>-->
+					</div>
+					<div class="abajo-der">
+						<button id="add-layer" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+							<i class="material-icons">add</i>
+						</button>
+					</div>
+				</div>
+				
+				<!--========== The Modal ============-->
+				<div id="myModal" class="modal">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<p>Some text in the Modal..</p>
+					</div>
+				</div>
+
+				<a href="https://codepen.io/sireeshav/pen/LNZOrb?q=layer&limit=all&type=type-pens">Ver en codepen</a>
+		      </div>
+		    </section>
+
+			<!--=================================== PESTAÑA RED NEURONAL ====================================-->
+
+		    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+		      <div class="page-content">
+
+		      	<!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
+				<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+
+					<!--================= MENU =============-->
+				  <div class="mdl-layout__drawer">
+				    <span class="mdl-layout-title">Capas</span>
+				    <nav class="mdl-navigation">
+				      <a class="mdl-navigation__link" href="">Entrada</a>
+				      <a class="mdl-navigation__link" href="">Oculta</a>
+				      <a class="mdl-navigation__link" href="">Convolucional</a>
+				      <a class="mdl-navigation__link" href="">Pooling</a>
+				      <a class="mdl-navigation__link" href="">Recurrente</a>
+				      <a class="mdl-navigation__link" href="">Salida</a>
+				    </nav>
+				    <span class="mdl-layout-title">Title 2</span>
+				  </div>
+				  <!--================= FIN MENU =============-->
+
+				  <!--================= CONTENIDO =============-->
+				  <main class="mdl-layout__content">
+				    <div class="page-content">
+
+			      		<div class="stage">
+							<div class="cube">
+							<figure class="borde back">atrás</figure>
+							<figure class="plano top">arriba</figure>
+							<figure class="plano bottom">abajo</figure>
+							<figure class="borde left">izq</figure>
+							<figure class="borde right">der</figure>
+							<figure class="borde front">frente</figure>
+							</div>
+
+							<div class="cube">
+							<figure class="borde back">atrás</figure>
+							<figure class="plano top">arriba</figure>
+							<figure class="plano bottom">abajo</figure>
+							<figure class="borde left">izq</figure>
+							<figure class="borde right">der</figure>
+							<figure class="borde front">frente</figure>
+							</div>
+
+							<div class="cube">
+							<figure class="borde back">atrás</figure>
+							<figure class="plano top">arriba</figure>
+							<figure class="plano bottom">abajo</figure>
+							<figure class="borde left">izq</figure>
+							<figure class="borde right">der</figure>
+							<figure class="borde front">frente</figure>
+							</div>
+						</div>
+
+				    </div>
+				  </main>
+				  <!--============== FIN CONTENIDO =============-->
+
+				</div>
+
+		      </div>
+		    </section>
+
+			<!--=================================== PESTAÑA ENTRENAMIENTO ====================================-->
+
+
+		    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+		      <div class="page-content">
+		      	<div class="layer-container stacked-top">
+					<div class="layer bottom-layer blue"></div>
+					<div class="layer mid-layer green"></div>
+					<div class="layer top-layer red"></div>
+				</div>
+		      </div>
+		    </section>
+
+
+		  </main>
+		</div>
+
+		<!--<div class='cube'>
+			<div class='face arriba'>arriba</div>
+			<div class='face izq'>izquierda</div>
+			<div class='face der'>derecha</div>
+		</div>-->
+
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

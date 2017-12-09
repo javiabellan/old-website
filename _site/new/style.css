@@ -1,0 +1,210 @@
+/*
+TUTOIALES
+
+cubo: http://www.creativebloq.com/3d/how-create-impressive-3d-graphics-css3-21410672
+
+*/
+
+body {
+    /*margin: 0;*/
+}
+
+.container {
+	width: 500px;
+    height: 800px;
+    position: relative;
+	background: #b4e0e1;
+}
+
+.abajo-der {
+	position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
+
+.layer-container {
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    perspective: 1350px;
+   transform-style: preserve-3d;
+}
+
+.layer {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    opacity: 0;
+    /*transition: [a quien] [duracion] [forma] [espera];*/
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    /*box-shadow: 0 20px 40px rgba(0, 0, 0, 0.30):*/;
+    box-shadow: 50px 50px 50px -50px rgba(0,0,0,0.3);
+
+    /* Posición isométrica 
+    transform: rotateX(45deg) rotateZ(45deg) */
+}
+
+.in { /* .layer.in */
+	/*transition: all 1.5s ease-in-out;
+	left: 10px;
+	transform: translateZ(200px);*/
+	opacity: 1;
+}
+
+
+/************** AÑADIR CAPA ANIMACIÓN ****************/
+
+/* ANTIGUO
+.layerActivate { 
+    -webkit-transform: translate(500px, 0px);
+       -moz-transform: translate(500px, 0px);
+        -ms-transform: translate(500px, 0px);
+            transform: translate(500px, 0px);
+}*/
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/***********************************************/
+
+
+
+.red   { background: #F44336; }
+.green { background: #4CAF50; }
+.blue  { background: #2196F3; }
+
+.dark-blue-layer  { background: #234688; }
+.light-blue-layer { background: #2abfd5; }
+.white-layer      { background: #ffffff; }
+
+.bottom-layer {
+    transform: rotateX(45deg) rotateZ(45deg) translateZ(0);
+}
+
+.mid-layer {
+    transform: rotateX(45deg) rotateZ(45deg) translateZ(50px);
+}
+
+.top-layer {
+    transform: rotateX(45deg) rotateZ(45deg) translateZ(100px);
+}
+
+/*
+
+.cube
+{
+  margin: 200px;
+}
+.face {
+  transform-origin: 0 0;
+  position: absolute;
+    width: 200px;
+    height: 200px;
+}
+.arriba {
+  background: blue;  
+  transform: rotateX(60deg) rotateZ(45deg);
+}
+.izq {
+  height: 50px;
+  background: red;
+  transform: rotateX(30deg) rotateY(45deg) translate3d(0px, 0px, -200px);
+}
+.der {
+  height: 50px;
+  background: green;
+  transform: rotateX(30deg) rotateY(-45deg) translate3d(0px, 200px, 0px);
+}
+
+*/
+
+
+
+.stage {
+	/*width: 500px; */
+	-webkit-perspective: 1600px;
+	-webkit-perspective-origin: 50% 0px;
+	background-color: #222;
+}
+
+.cube {
+	/*margin: auto;*/
+	padding: 80px;
+	/*esto es para que lo que va delante en 3d se pinte delante*/
+	-webkit-transform-style: preserve-3d;
+}
+
+figure {
+	display: block;
+	position: absolute;
+	background-color: #60c2ef;
+}
+
+figure.plano {
+  width: 300px; height: 300px;
+}
+
+figure.borde {
+  width: 300px; height: 100px;
+}
+
+figure { -webkit-transform-origin: 50% 50% 0; }
+.front { -webkit-transform: translateZ(150px); }
+.back { -webkit-transform: rotateY(180deg) translateZ(150px); }
+
+
+.top {
+	background-color: #eee;
+	-webkit-transform: rotateX(90deg) translateZ(150px);
+}
+.bottom { -webkit-transform: rotateX(-90deg) translateZ(-50px); }
+.left { -webkit-transform: rotateY(-90deg) translateZ(150px); }
+.right { -webkit-transform: rotateY(90deg) translateZ(150px); }
+
+
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotateY(0); }
+  100% { -webkit-transform: rotateY(360deg); }
+}
+
+.cube { -webkit-animation: rotate 100s infinite linear; }
