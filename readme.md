@@ -29,5 +29,10 @@ Esta página se ha desarrollado con jekll
 
 * [markojerkic](https://markojerkic.com)
 
+## Youtube
+
+* [bordes redondos](https://stackoverflow.com/questions/12492250/youtube-embedded-video-as-iframe-with-border-radius)
+
+
 
 
