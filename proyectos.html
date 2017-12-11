@@ -31,20 +31,23 @@ title: Proyectos
   <main class="mdl-layout__content">
     <div class="page-content">
 			<!-- Your content goes here -->
-			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--4-col">Content</div>
-				<div class="mdl-cell mdl-cell--4-col">goes</div>
-				<div class="mdl-cell mdl-cell--4-col">here</div>
-				<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp"></div>
-				<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
-		    	<div class="mdl-card__title">
-			      <h1 class="mdl-card__title-text">Learning Web Design</h1>
-			    </div>
-			    <div class="mdl-card__supporting-text">
-			      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
-			    </div>
-			  </div>
-			</div>
+			{% include_relative pruebas/grid.html %}
+			<!--
+			{% for post in site.posts %}
+				<article class="{% if forloop.first %}first{% elsif forloop.last %}last{% else %}middle{% endif %}">
+					<div class="article-head">
+						<h2 class="title"><a href="/{{ post.url }}/" class="js-pjax">{{ post.title }}</a></h2>
+						<p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
+					</div>
+					<div class="article-content">
+					{{ post.long_description }}
+					<a href="/{{ post.url }}/" class="full-post-link js-pjax">Read more</a>	
+					</div>
+				</article>
+				{% if forloop.last %}{% else %}<div class="separater"></div>{% endif %}
+			{% endfor %}
+			º-->
+
     </div>
   </main>
 </div>

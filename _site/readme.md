@@ -20,8 +20,14 @@ Esta página se ha desarrollado con jekll
 * [Ver luego este](https://www.taniarascia.com/make-a-static-website-with-jekyll/)
 
 
+## Temas Jekll
 
+* http://christo.ga/jekyll-material/
+* https://joshuaavalon.io/Jekyll-Avalon
 
 ## Otros blogs
 
 * [markojerkic](https://markojerkic.com)
+
+
+

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+  <div class="demo-crumbs mdl-color-text--grey-500">
+    {{ page.categories }} &gt; {{ page.title }}
+  </div>  
+  {% if page.cover %}<br><img src="{{ page.cover }}" class="post-cover" />{% endif %}
+  <h1>{{ page.title }}</h1>
+  <p class="meta">{{ page.date | date: "%-d %B %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  {{ content }}
+  <div class="mdl-card__actions mdl-card--border" align="center"><br>
+    <br>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect twitter-btn">
+      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;via={{ site.social.twitter }}&amp;url={{ site.url }}{{ page.url }}"><i class="fa fa-twitter fa-2x" style="margin-top:11px;"></i></a>
+    </button>
+  </div>
+  <br><br>
+  <section>
+    <div id="disqus_thread"></div>
+  </section>
+</div>
+<script type="text/javascript">
+    var disqus_shortname = '{{ site.social.disqus }}';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
